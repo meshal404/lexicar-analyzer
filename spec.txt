@@ -1,0 +1,42 @@
+# NAME        REGEX
+# ORDER = PRIORITY (earlier line wins ties). Lines starting with # are ignored.
+
+# --- Spaces (matched, then skipped by the simulator) ---
+WS            [ \t\r\n]+
+
+# --- Keywords ---
+KW_IF         if
+KW_THEN       then
+KW_ELSE       else
+KW_WHILE      while
+KW_RETURN     return
+KW_FOR        for
+KW_BREAK      break
+KW_CONTINUE   continue
+KW_INT        int
+KW_FLOAT      float
+
+# --- Identifier and Number ---
+ID            [A-Za-z][A-Za-z0-9_]*
+NUM           [0-9]+(\.[0-9]+)?
+
+# --- Operators ---
+OP_PLUS       \+
+OP_MINUS      -
+OP_MUL        \*
+OP_DIV        /
+EQ            ==
+NEQ           !=
+LE            <=
+GE            >=
+ASSIGN        =
+LT            <
+GT            >
+
+# --- Delimiters ---
+LPAREN        \(
+RPAREN        \)
+LBRACE        \{
+RBRACE        \}
+SEMI          ;
+COMMA         ,

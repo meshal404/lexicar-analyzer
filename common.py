@@ -1,4 +1,5 @@
 EPS = ""   # the epsilon "symbol"
+ALPHABET = [chr(c) for c in range(32, 127)] + ["\t", "\n", "\r"]
 
 # Rules everyone follows:
 #  - states are ints 0..size-1
@@ -27,6 +28,7 @@ class DFA:
         self.start = 0
         self.edges = {}      # (state, char) -> next state   (missing = dead end)
         self.accept = {}     # state -> (token_name, priority)
+        self.dead = None
 
     def new_state(self):
         self.size += 1
